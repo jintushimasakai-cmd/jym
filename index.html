@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jym - Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Workout Tracker</h1>
+      <p class="subtitle">Track each set by exercise, weight, and reps.</p>
+
+      <form id="workout-form" class="card">
+        <label>
+          Exercise
+          <input id="exercise" name="exercise" type="text" placeholder="e.g. Bench Press" required />
+        </label>
+
+        <div class="row">
+          <label>
+            Weight (lb)
+            <input id="weight" name="weight" type="number" min="0" step="0.5" placeholder="e.g. 135" required />
+          </label>
+
+          <label>
+            Reps
+            <input id="reps" name="reps" type="number" min="1" step="1" placeholder="e.g. 8" required />
+          </label>
+        </div>
+
+        <button type="submit">Add Workout</button>
+      </form>
+
+      <section class="card">
+        <h2>Logged Workouts</h2>
+        <ul id="workout-list" class="workout-list"></ul>
+        <p id="empty-state" class="empty">No workouts logged yet.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
